@@ -39,3 +39,28 @@ let score3 = 300;
 
 // Create an array from the scores
 console.log(Array.of(score1, score2, score3)); // Output: [100, 200, 300]
+
+
+
+
+
+// Define an array of numbers
+let list = [1, 2, 3, 4, 54, 5];
+
+// Check if every element in the list is less than 100
+// The 'every' method tests whether all elements in the array pass the provided function
+// The function returns true if all elements are less than 100, otherwise it returns false
+console.log(
+  list.every(function (ele) {
+    return ele < 100; // Return true if 'ele' (current element) is less than 100
+  })
+);
+
+// Check if at least one element in the list is greater than 4
+// The 'some' method tests whether at least one element in the array passes the provided function
+// The function returns true if any element is greater than 4, otherwise it returns false
+console.log(
+  list.some(function (ele) {
+    return ele > 4; // Return true if 'ele' (current element) is greater than 4
+  })
+);
