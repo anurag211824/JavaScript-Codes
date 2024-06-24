@@ -1,0 +1,76 @@
+// Global Scope
+var c = 300; // var is function-scoped, declared in global scope
+let a = 300; // let is block-scoped, declared in global scope
+
+// Start of a new block scope
+if (true) {
+    let a = 10; // New block-scoped variable 'a', shadows global 'a'
+    const b = 20; // Block-scoped constant 'b'
+    console.log("INNER: ", a); // Will log 10
+}
+
+// Back to global scope
+console.log(a); // Will log 300, as global 'a' is not affected by the block-scoped 'a'
+try {
+    console.log(b); // Will throw a ReferenceError, as 'b' is not accessible outside the block
+} catch (e) {
+    console.log(e.message); // Will log "b is not defined"
+}
+console.log(c); // Will log 300, as 'c' is globally defined
+
+// Function Scope Example
+function one() {
+    const username = "hitesh"; // Function-scoped variable 'username'
+
+    function two() {
+        const website = "youtube"; // Function-scoped variable 'website' within 'two'
+        console.log(username); // Will log "hitesh", 'username' is accessible within inner function
+    }
+    try {
+        console.log(website); // Will throw a ReferenceError, as 'website' is not accessible outside 'two'
+    } catch (e) {
+        console.log(e.message); // Will log "website is not defined"
+    }
+    two();
+}
+
+one();
+
+if (true) {
+    const username = "hitesh"; // Block-scoped variable 'username'
+    if (username === "hitesh") {
+        const website = " youtube"; // Block-scoped variable 'website' within nested block
+        console.log(username + website); // Will log "hitesh youtube"
+    }
+    try {
+        console.log(website); // Will throw a ReferenceError, as 'website' is not accessible outside the nested block
+    } catch (e) {
+        console.log(e.message); // Will log "website is not defined"
+    }
+}
+
+try {
+    console.log(username); // Will throw a ReferenceError, as 'username' is not accessible outside the block
+} catch (e) {
+    console.log(e.message); // Will log "username is not defined"
+}
+
+// ++++++++++++++++++ interesting ++++++++++++++++++
+
+// Function Declaration Hoisting
+console.log(addone(5)); // Will log 6, as function declarations are hoisted
+
+function addone(num) {
+    return num + 1;
+}
+
+// Function Expression Hoisting
+try {
+    console.log(addTwo(5)); // Will throw a TypeError, as function expressions are not hoisted
+} catch (e) {
+    console.log(e.message); // Will log "addTwo is not a function"
+}
+
+const addTwo = function(num) {
+    return num + 2;
+};
