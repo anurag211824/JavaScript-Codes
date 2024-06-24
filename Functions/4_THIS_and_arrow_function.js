@@ -64,4 +64,4 @@ const arrowFunc = () => {
 }
 
 // Invoking the arrow function
-arrowFunc(); // If defined in the global context, 'this' will refer to the global object (window in browsers)
+arrowFunc(); // If defined in the global context, 'this' will refer to the global object (window in browser
