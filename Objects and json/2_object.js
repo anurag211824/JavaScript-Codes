@@ -130,3 +130,8 @@ console.log(Object.entries(tinderUser)); // Output: [ [ 'id', '123abc' ], [ 'nam
 console.log(tinderUser.hasOwnProperty('isLoggedIn')); // Output: true
 
 //................................................................................................................................................................
+
+
+
+
+

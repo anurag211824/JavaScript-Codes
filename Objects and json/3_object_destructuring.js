@@ -33,7 +33,7 @@ const obj4 = { 5: "a", 6: "b" };
 const obj3 = { ...obj1, ...obj2 };
 
 // Uncomment the line below to log the merged object obj3 to the console
-// console.log(obj3);
+//console.log(obj3);
 
 // Creating an array of user objects
 const users = [
@@ -55,6 +55,7 @@ const users = [
 // Uncomment the line below to log the email to the console
 // console.log(users[1].email);
 
+// Key ,Value , enteries methods
 // Logging various properties and methods of the tinderUser object
 // Uncomment the lines below to see the outputs
 // console.log(Object.keys(tinderUser));       // Logs an array of keys
