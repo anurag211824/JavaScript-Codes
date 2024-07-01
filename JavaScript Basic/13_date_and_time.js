@@ -1,6 +1,7 @@
 // Create a new Date object with the current date and time
 let mydate = new Date();
-console.log(mydate);  // Logs the current date and time
+console.log(mydate);  
+// Logs the current date and time
 
 // Attempt to log the toDateString method itself (not invoked)
 console.log(mydate.toDateString());  // Logs the function definition (needs to be invoked with parentheses)

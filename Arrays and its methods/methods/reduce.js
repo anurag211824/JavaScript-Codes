@@ -8,15 +8,21 @@ function findSum(arr) {
     }
     return sum;
 }
-console.log("Sum using for loop:", findSum(arr)); // Output: 17
+//console.log("Sum using for loop:", findSum(arr)); 
+// Output: 17
 
 // Sum of array elements using reduce method
+let intialVal=0
 const outputarr1 = arr.reduce(function(acc, curr) {
     acc = acc + curr;
     return acc;
-}, 0);
+}, intialVal);
 
-console.log("Sum using reduce method:", outputarr1); // Output: 17
+//console.log("Sum using reduce method:", outputarr1); // Output: 17
+
+//using arrow function
+const arrTotal=arr.reduce((acc,curr)=>acc+curr,0)
+//console.log(arrTotal);
 
 // Find the maximum element in the array using a for loop
 function findMax(arr) {
@@ -28,7 +34,8 @@ function findMax(arr) {
     }
     return max;
 }
-console.log("Max using for loop:", findMax(arr)); // Output: 6
+//console.log("Max using for loop:", findMax(arr)); 
+// Output: 6
 
 // Find the maximum element in the array using reduce method
 const outputarr2 = arr.reduce(function(max, curr) {
@@ -38,7 +45,8 @@ const outputarr2 = arr.reduce(function(max, curr) {
     return max;
 }, 0);
 
-console.log("Max using reduce method:", outputarr2); // Output: 6
+//console.log("Max using reduce method:", outputarr2); 
+// Output: 6
 
 // More complex example: Array of user objects
 const users = [
@@ -61,4 +69,5 @@ const ageCounts = users.reduce(function(acc, curr) {
     return acc;
 }, {});
 
-console.log("Age counts:", ageCounts); // Output: {20: 2, 21: 3, 22: 2}
+//console.log("Age counts:", ageCounts); 
+// Output: {20: 2, 21: 3, 22: 2}

@@ -1,3 +1,10 @@
+const myNums=[1,2,3,4,5,6,7,8]
+
+const myNewNums=myNums.filter((num)=>{
+    return num>4;
+})
+console.log(myNewNums)
+
 // Array of numbers
 const arr = [5, 1, 3, 2, 6];
 
@@ -45,6 +52,8 @@ const users = [
 
 // Filter users with age less than 21 and map their first names
 const firstNameAgeLessThan21 = users.filter((x) => x.age < 21).map((x) => x.firstname);
+// const firstNameAgeLessThan21 = users.filter((x) => x.age <= 21 && x.firstname == "anurag");
+
 
 // Print the first names of users with age less than 21
 console.log("First names of users with age less than 21:", firstNameAgeLessThan21); // Output: ["abhinav", "ayush"]
