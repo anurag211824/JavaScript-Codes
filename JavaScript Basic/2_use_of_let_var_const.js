@@ -21,7 +21,8 @@ function exampleFunction() {
         // Trying to reassign a const variable will result in an error
         // blockScopedConstant = "New value"; // Error: Assignment to constant variable.
     }
-    // console.log(blockScopedConstant); // Error: blockScopedConstant is not defined
+    //console.log(blockScopedConstant); 
+    // Error: blockScopedConstant is not defined
 }
 
 exampleFunction();
