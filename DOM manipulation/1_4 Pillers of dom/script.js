@@ -23,3 +23,7 @@ b.addEventListener("click",function(){
     a.style.color="yellow"
     a.style.backgroundColor="blue"
 })
+
+
+
+
