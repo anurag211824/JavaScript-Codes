@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Selectors Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="example1">
+        <h2>getElementById</h2>
+        <p id="unique">This is a unique element.</p>
+        <button onclick="highlightElementById()">Highlight Element by ID</button>
+    </div>
+
+    <div class="container" id="example2">
+        <h2>getElementsByClassName</h2>
+        <div class="example-class">Class Element 1</div>
+        <div class="example-class">Class Element 2</div>
+        <div class="example-class">Class Element 3</div>
+        <button onclick="highlightElementsByClassName()">Highlight Elements by Class Name</button>
+    </div>
+
+    <div class="container" id="example3">
+        <h2>getElementsByTagName</h2>
+        <span>Tag Element 1</span>
+        <span>Tag Element 2</span>
+        <span>Tag Element 3</span>
+        <button onclick="highlightElementsByTagName()">Highlight Elements by Tag Name</button>
+    </div>
+
+    <div class="container" id="example4">
+        <h2>querySelector</h2>
+        <p class="query-selector">Query Selector Element 1</p>
+        <p class="query-selector">Query Selector Element 2</p>
+        <button onclick="highlightQuerySelector()">Highlight Query Selector</button>
+    </div>
+
+    <div class="container" id="example5">
+        <h2>querySelectorAll</h2>
+        <p class="query-selector-all">Query Selector All Element 1</p>
+        <p class="query-selector-all">Query Selector All Element 2</p>
+        <button onclick="highlightQuerySelectorAll()">Highlight Query Selector All</button>
+    </div>
+
+    <div class="container" id="example6">
+        <h2>NodeList Example</h2>
+        <ul id="nodelist-example">
+            <li>Node 1</li>
+            <li>Node 2</li>
+            <li>Node 3</li>
+        </ul>
+        <button onclick="highlightNodeList()">Highlight NodeList</button>
+    </div>
+
+    <div class="container" id="example7">
+        <h2>HTMLCollection Example</h2>
+        <div class="html-collection">HTML Collection 1</div>
+        <div class="html-collection">HTML Collection 2</div>
+        <div class="html-collection">HTML Collection 3</div>
+        <button onclick="highlightHTMLCollection()">Highlight HTMLCollection</button>
+    </div>
+
+    <script src="1_script.js"></script>
+</body>
+</html>
