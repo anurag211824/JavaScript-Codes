@@ -1,6 +1,6 @@
 body {
   font-family: 'IBM Plex Sans', sans-serif;
-  background-color: #f0f4f8;
+  background-color:whitesmoke;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,7 @@ body {
 
 h1 {
   font-family: 'Anton SC', sans-serif;
-  color: #333;
+ color: #007bff;
   margin-bottom: 20px;
 }
 
