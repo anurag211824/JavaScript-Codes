@@ -12,7 +12,7 @@ const res = addNumbers(2, 4, 5, 6, 7, 8, 9); // Only the first three arguments a
 // Function demonstrating the spread operator
 function getNames(name1, name2, name3) {
     // Logs the first three names passed as arguments
-    // console.log(name1, name2, name3); 
+    console.log(name1, name2, name3); 
     // Uncomment to see the names
 }
 
@@ -27,11 +27,11 @@ const students = {
 
 // Using the rest operator to capture all properties of the 'students' object
 const { ...rest } = students;
-console.log(rest); // Logs the entire 'students' object
+//console.log(rest); // Logs the entire 'students' object
 
 // Using the spread operator to create a new object by copying properties from the 'students' object
 const newstudent = {
     ...students, // Copies all properties from the 'students' object
     age: 29, // Overwrites the 'age' property
 };
-console.log(newstudent); // Logs the new 'newstudent' object with the updated 'age' property
+//console.log(newstudent); // Logs the new 'newstudent' object with the updated 'age' property
