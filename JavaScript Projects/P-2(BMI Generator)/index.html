@@ -13,6 +13,35 @@
     />
 </head>
 <body>
-    
+  <div class="container">
+    <h1>BMI Calculator</h1>
+    <br>
+  <form>
+  <div> <label for="height">Height in Cm:</label>
+    <input type="text" id="height" autocomplete="off">
+  </div>
+   <div>
+    <label for="weight">Weight in Kg:</label>
+    <input type="text" id="weight" autocomplete="off">
+   </div>
+   <div>
+    <label for="bmi">BMI:</label>
+    <br>
+    <input type="text" id="bmi" placeholder="Click calculate" autocomplete="off">
+   </div>
+   <button type="button" onclick='bmiCalculator()'>Calculate</button>
+    <div class="UnderWeight">
+
+    </div>
+    <div class="NormalRange">
+
+    </div>
+    <div class="Overweight">
+      
+    </div>
+
+    </form>
+  </div>
 </body>
+<script src="script.js"></script>
 </html>
