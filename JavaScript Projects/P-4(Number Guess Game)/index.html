@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Number Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -12,23 +12,33 @@
         <h3>Number guessing game</h3>
       </div>
       <div class="gameInstruction">
-        <p>
-          Try and guess a random number between 1 and 100.
-        </p>
-        <p>You have 10 attempts
-            to guess the right number.</p>
+        <p>Try and guess a random number between 1 and 100.</p>
+        <p>You have 10 attempts to guess the right number.</p>
       </div>
       <div class="playGround">
         <div class="head">
-           <h1>Guess a Number</h1>
+          <h1>Guess a Number</h1>
         </div>
         <div>
-          <input type="text" placeholder="enter your number" />
-          <button type="button">Submit Guess</button>
+          <input type="text" placeholder="enter your number" id="guessField" />
+          <button type="button" id="submit">Submit Guess</button>
         </div>
-        <div class="previousGuess">Previous Guess:</div>
-        <div class="guessRemaining">Guess Remaining:</div>
+        <div class="resultBox">
+          <div class="previousGuess">
+            Previous Guess: <span class="guesses"></span>
+          </div>
+          <div class="guessRemaining">
+            Guess Remaining: <span class="lastResult"></span>
+          </div>
+          <div class="lowHigh"><p>
+
+          </p></div>
+        </div>
+      </div>
+      <div class="newgame">
+        
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
