@@ -29,7 +29,7 @@ const binaryArr = arr.map(binary);
 console.log("Binary representation:", binaryArr); // Output: ["101", "1", "10", "11", "110"]
 
 // Map the array to get binary representation using an arrow function
-const output = arr.map((x) => x.toString(2));
+const output = arr.map(x => x.toString(2));
 console.log("Binary representation (using arrow function):", output); // Output: ["101", "1", "10", "11", "110"]
 
 // More complex example: Array of user objects

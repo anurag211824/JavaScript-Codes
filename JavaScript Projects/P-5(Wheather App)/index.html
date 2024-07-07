@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin: auto;
+        margin-top: 100px;
+        box-shadow: 0 0 10px;
+      }
+      .head {
+        background-color: rgb(28, 241, 241);
+        text-align: center;
+        padding: 30px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        font-weight: 600;
+      }
+      .mainContent {
+        margin: auto;
+        margin-top: 50px;
+        width: 70%;
+
+        overflow: hidden;
+      }
+      .searchBar {
+        display: flex;
+        justify-content: space-between;
+      }
+      .inp {
+        padding: 5px;
+        width: 65%;
+        border-radius: 10px;
+      }
+      .btn {
+        padding: 5px;
+        width: 30%;
+        border-radius: 10px;
+      }
+      .information {
+        margin-top: 30px;
+      }
+      .box {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .city {
+        font-size: larger;
+        font-weight: 600;
+      }
+      .foot {
+        background-color: rgb(169, 162, 162);
+        color: white;
+        padding: 43px;
+        text-align: center;
+        overflow: hidden;
+      }
+      @media (width<=450px) {
+        .searchBar {
+          display: flex;
+          flex-direction: column;
+          input {
+            width: 100%;
+          }
+          Button {
+            width: 100%;
+            margin-top: 3px;
+          }
+        }
+        .container {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="head">Weather Dashboard</header>
+      <main class="mainContent">
+        <div class="searchBar">
+          <input
+            class="inp"
+            id="cityInput"
+            type="text"
+            placeholder="Enter city"
+          />
+          <button class="btn" id="getWeatherBtn">Get Weather</button>
+        </div>
+        <div class="information">
+          <div class="box city" id="city">City: Roorkee</div>
+          <div class="box temp" id="temp">Temperature: 32.82°C</div>
+          <div class="box weather" id="weather">Weather: Broken clouds</div>
+          <div class="box humidity" id="humidity">Humidity: 49%</div>
+          <div class="box windSpeed" id="windSpeed">Wind Speed: 1.83 m/s</div>
+        </div>
+      </main>
+      <footer class="foot">© 2024 Weather Dashboard</footer>
+    </div>
+    <script>
+      document
+        .getElementById("getWeatherBtn")
+        .addEventListener("click", async function () {
+          const city = document.getElementById("cityInput").value;
+          const apiKey = "e0bb0abed4e951324d3a2d1c5f79495a";
+          const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+          try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            document.getElementById("city").textContent = `City: ${data.name}`;
+            document.getElementById(
+              "temp"
+            ).textContent = `Temperature: ${data.main.temp}°C`;
+            document.getElementById(
+              "weather"
+            ).textContent = `Weather: ${data.weather[0].description}`;
+            document.getElementById(
+              "humidity"
+            ).textContent = `Humidity: ${data.main.humidity}%`;
+            document.getElementById(
+              "windSpeed"
+            ).textContent = `Wind Speed: ${data.wind.speed} m/s`;
+          } catch (error) {
+            console.error("Error fetching weather data:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
