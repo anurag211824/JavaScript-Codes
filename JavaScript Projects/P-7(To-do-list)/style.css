@@ -1,0 +1,80 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing :border-box;
+    font-family: "Poppins", sans-serif;
+    
+    
+  }
+  html,body{
+    width:100%;
+    height:100%;
+    background-color: #333;
+  }
+  .conatiner{
+    width:100%;
+    max-width: 500px;
+    margin:auto;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+  }
+  .heading{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    font-size: 30px;
+    font-weight: 500;
+    
+  }
+  .taskInput{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding:10px;
+  }
+  .taskInput input {
+    width: 50%;
+    height: 25px;
+    border-radius: 10px;
+    padding: 5px 10px; 
+    font-size: 14px;
+}
+  .taskInput button{
+    width: 30%;
+    height: 25px;
+    border-radius: 10px;
+    background: #2ecc71;
+  }
+  .taskdiv {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; /* Center items vertically */
+    background-color: #f9f9f9; /* Light background color */
+    padding: 10px; /* Padding inside the task div */
+    margin-bottom: 10px; /* Space between task divs */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ddd; /* Light border */
+    gap: 50px;
+}
+
+.taskdiv button {
+    background-color: #ff4d4d; /* Red background color for delete button */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+.taskdiv button:hover {
+    background-color: #ff1a1a; /* Darker red on hover */
+}
