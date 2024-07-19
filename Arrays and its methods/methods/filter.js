@@ -39,7 +39,6 @@ console.log("Numbers greater than 4:", outputarr3); // Output: [5, 6]
 const outputarr4 = arr.filter((x) => x > 4);
 console.log("Numbers greater than 4 (using arrow function):", outputarr4); // Output: [5, 6]
 
-// More complex example: Array of user objects
 const users = [
     { firstname: "anurag", lastname: "kumar", age: 21 },
     { firstname: "deepak", lastname: "sharma", age: 22 },
@@ -52,8 +51,43 @@ const users = [
 
 // Filter users with age less than 21 and map their first names
 const firstNameAgeLessThan21 = users.filter((x) => x.age < 21).map((x) => x.firstname);
-// const firstNameAgeLessThan21 = users.filter((x) => x.age <= 21 && x.firstname == "anurag");
-
 
 // Print the first names of users with age less than 21
 console.log("First names of users with age less than 21:", firstNameAgeLessThan21); // Output: ["abhinav", "ayush"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// users.map((ele)=>{
+//     if(ele.age>=21){
+//         console.log(ele.firstname);
+//     }
+// })
+
+// const usersBelowAge = users.filter((ele)=>{
+//     if(ele.age>21){
+//         console.log(ele.firstname);
+//     }
+//     return ele.age>21;
+// })
+// console.log(usersBelowAge)

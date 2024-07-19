@@ -1,8 +1,10 @@
-const math=require("./math")
-console.log(math);
+// const math=require("./math")
 
-console.log(math.add(2,5));
-console.log(math.sub(8,4))
+import operations from "./math.js"
+console.log(operations);
+
+console.log(operations.add(2,5));
+console.log(operations.sub(8,4));
 
 
 // const {add,sub}=require("./math")
