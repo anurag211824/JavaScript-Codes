@@ -1,0 +1,15 @@
+URL=> uniform Resource locator (https://www.anuragkumar.dev/)
+
+1.https://(protocol)=>Hyper text transfer protocol secure
+
+2.www.anuragkumar.dev(DNS)=>user friendly Name of Ip Address of my server
+
+3./=>path:/Homepage or rootpage
+
+
+URL path
+
+URL Nested path
+
+URL(query parameters)
+anuragkumar.dev/about?userid=1&a=2
