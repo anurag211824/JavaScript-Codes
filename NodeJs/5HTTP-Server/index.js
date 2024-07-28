@@ -6,7 +6,7 @@ const myserver = http.createServer((req, res) => {
   // Uncomment these lines to log request details for debugging
   // console.log("New req rec");
   // console.log(req.headers);
-  // console.log(req);
+  console.log(req);
 
   // Log request details to a file
   const log = `${Date.now()}: ${req.url} New request received\n`;

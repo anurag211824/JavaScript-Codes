@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+</body>
+<script src="6_json.js">
+
+
+//concept of local storage
+
+
+
+
+// Create an object 'person' with properties and a method
+const person = {
+  name: "Anurag Kumar", // Name of the person
+  age: 25,              // Age of the person
+  occupation: "Developer", // Occupation of the person
+  greet: function() {   // Method to greet, using the 'name' property
+    console.log("Hello, my name is " + this.name);
+  }
+};
+
+// Store the 'person' object in localStorage
+// JSON.stringify converts the object into a JSON string for storage
+localStorage.setItem('person', JSON.stringify(person));
+
+// Retrieve the 'person' object from localStorage
+// JSON.parse converts the JSON string back into a JavaScript object
+const anurag = JSON.parse(localStorage.getItem('person'));
+
+// Access and log the properties of the retrieved object
+console.log(anurag.name);       // Output: Anurag Kumar
+console.log(anurag.occupation); // Output: Developer
+console.log(anurag.age);        // Output: 25
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
