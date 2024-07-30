@@ -1,0 +1,21 @@
+A REST API (Representational State Transfer Application Programming Interface) is a set of rules that allow programs to communicate with each other over the internet. It uses HTTP methods to perform CRUD (Create, Read, Update, Delete) operations on resources, which are typically represented in formats like JSON or XML.
+
+Here's a quick overview of the key components of a REST API:
+
+Resources: These are the objects or entities that the API interacts with. Each resource is identified by a unique URI (Uniform Resource Identifier).
+
+HTTP Methods: These are used to perform actions on the resources. The most common ones are:
+
+GET: Retrieve a resource or a list of resources.
+POST: Create a new resource.
+PUT: Update an existing resource.
+DELETE: Delete a resource.
+Statelessness: REST APIs are stateless, meaning each request from a client to the server must contain all the information the server needs to understand and process the request. The server does not store any state between requests.
+
+Representation: Resources can be represented in various formats, such as JSON, XML, or plain text, with JSON being the most commonly used format.
+
+URI (Uniform Resource Identifier): Each resource in a REST API is identified by a unique URI, which acts as the address for the resource.
+
+To build a REST API, you typically need to design the endpoints (the URIs) and implement the server-side logic to handle the requests. Popular frameworks and languages for building REST APIs include:
+
+Node.js with Express: A lightweight framework for building web applications and APIs in JavaScript.
