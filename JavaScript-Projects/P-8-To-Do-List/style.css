@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+.container{
+    width:500px;
+    display: grid;
+    grid-template-columns:150px 150px 150px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.todo-container{
+    width:500px;
+    display: grid;
+    grid-template-columns:150px 150px 150px;
+    justify-content: space-between;
+    gap:10px;
+}
+.addTodo{
+    background-color: rgb(65, 205, 65);
+    border: none;
+    color: white;
+}
+
+  .date {
+    text-align: center;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
