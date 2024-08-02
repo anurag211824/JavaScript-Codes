@@ -1,0 +1,8 @@
+//NPM understanding
+//npm -Node Package Manager
+//installing and uninstalling anything basic and advanced
+//install npm i packagename
+//uninstall npm uninstall packagename
+//dependencies - packages and packages dependencies
+//devdependencies - 
+// Scripts -understanding default scripts 

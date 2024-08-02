@@ -53,6 +53,7 @@ const add = (num1, num2) => ({ username: "anurag" }); // To return an object, wr
 
 console.log(multiply(2, 5)); // Logs: 10
 
+
 // Additional notes on 'this' and arrow functions:
 
 // 'this' in arrow functions:

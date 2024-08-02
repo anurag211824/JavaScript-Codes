@@ -44,7 +44,7 @@ function loginUserMessage(username = "sam"){
 }
 
 // Call the function loginUserMessage with argument "hitesh" and print the result
-console.log(loginUserMessage("hitesh"));
+//console.log(loginUserMessage("hitesh"));
 
 // Uncomment the line below to call the function and print the login message for "hitesh"
 // console.log(loginUserMessage("hitesh"));
@@ -56,7 +56,7 @@ function calculateCartPrice(val1, val2, ...num1){
     return num1
 }
 
-// console.log(calculateCartPrice(200, 400, 500, 2000))
+console.log(calculateCartPrice(200, 400, 500, 2000))
 
 const user = {
     username: "hitesh",
@@ -80,4 +80,16 @@ function returnSecondValue(getArray){
 }
 
 // console.log(returnSecondValue(myNewArray));
-//console.log(returnSecondValue([200, 400, 500, 1000]));
+console.log(returnSecondValue([200, 400, 500, 1000]));
+
+
+
+function calculateCartPrice(itemPrice1, itemPrice2, ...additionalCosts) {
+    // Sum up the item prices and additional costs
+    const totalPrice = [itemPrice1, itemPrice2, ...additionalCosts].reduce((acc, current) => acc + current, 0);
+    return totalPrice;
+}
+
+// Example usage
+const total = calculateCartPrice(10, 5, 100, 200);
+console.log(total); // Output will be 315

@@ -9,3 +9,10 @@ function greet(name) {
 
 let greeting = greet("Alice");  // "Hello, Alice"
 console.log(greeting);
+
+
+
+const add=(num1,num2)=>{
+    console.log(num1+num2);
+}
+add(3,5)
