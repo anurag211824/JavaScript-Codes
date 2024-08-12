@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="app">
-        <h1>Simple Quiz</h1>
-        <div class="quiz">
-            <h2 id="question">Question goes here</h2>
-            <div id="answer-buttons" class="btn-container"></div>
-            <button id="next-btn" class="btn hide">Next</button>
-            <div id="score-container" class="hide">
-                <h3>Your score: <span id="score"></span></h3>
-                <button id="restart-btn" class="btn">Restart</button>
-            </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="quiz-box">
+      <div class="option-box">
+        <h2 class="question"></h2>
+        <div class="option-list">
+          <li>
+            <input type="radio" id="option1" name="option" />
+            <label for="option1" class="option1"></label>
+          </li>
+          <li>
+            <input type="radio" id="option2" name="option" />
+            <label for="option2" class="option2"></label>
+          </li>
+          <li>
+            <input type="radio" id="option3" name="option" />
+            <label for="option3" class="option3"></label>
+          </li>
+          <li>
+            <input type="radio" id="option4" name="option" />
+            <label for="option4" class="option4"></label>
+          </li>
+          <button class="submitbtn">Submit</button>
         </div>
+      </div>
+      <img class="quiz-img" src="Quiz.png" alt="Quiz Image" />
     </div>
-    <script src="script.js"></script>
-</body>
+  </body>
+  <script src="script.js"></script>
 </html>
