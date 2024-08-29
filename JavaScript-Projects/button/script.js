@@ -1,16 +1,13 @@
 let count=0;
 let countText=document.querySelector(".demo")
 countText.textContent=count;
-let btnI=document.querySelector(".btnI")
-let btnD=document.querySelector(".btnD")
-
-btnI.addEventListener("click",()=>{
+function increase(){
    count++;
-   countText.textContent=count;
-
-})
-
-btnD.addEventListener("click",()=>{
+   let countText=document.querySelector(".demo")
+countText.textContent=count;
+}
+function decrese(){
    count--;
-   countText.textContent=count;
-})
+   let countText=document.querySelector(".demo")
+countText.textContent=count;
+}
