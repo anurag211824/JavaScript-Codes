@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetTimeout and setInterval</title>
+  </head>
+  <body></body>
+  <script>
+    //it allows us to run a function in future
+    //it takes function and time and run that function after that time
+    //Asynchronus code don not wait for a line to finish before going to the next line.
+    //Synchronus code is just opposite
+    setTimeout(function () {
+      console.log("timeout1");
+      console.log("timeout2");
+    }, 3000);
+    console.log("nextline");
+     //it allows us to keep running a function  every 3 sec
+    setInterval(function(){
+        console.log('interval');
+        
+    },3000);
+    console.log('nextline2')
+  </script>
+</html>
