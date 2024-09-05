@@ -54,8 +54,8 @@ function playGame(choice) {
   }
   let choiceElement = document.querySelector(".choice");
   choiceElement.innerHTML = `You
-  <img src="/project/${choice}-emoji.png" alt="${choice}" style="width: 30px;">
-  <img src="/project/${computerMove}-emoji.png" alt="${computerMove}" style="width: 30px;">
+  <img src="${choice}-emoji.png" alt="${choice}" style="width: 30px;">
+  <img src="${computerMove}-emoji.png" alt="${computerMove}" style="width: 30px;">
   Computer
 `;
 
