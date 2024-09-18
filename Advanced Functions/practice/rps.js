@@ -5,7 +5,28 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 };
 
 updateGameScore();
-
+document.querySelector('.rock-button').addEventListener('click', ()=>{ 
+  playGame('rock');
+});
+document.querySelector('.paper-button').addEventListener('click', ()=>{ 
+  playGame('paper');
+});
+document.querySelector('.scissors-button').addEventListener('click', ()=>{ 
+  playGame('scissors');
+});
+document.body.addEventListener("keydown",(event)=>{
+  if(event.key==='r'){
+    playGame('rock');
+  }
+  else if(event.key==='p'){
+    playGame('paper')
+  }
+  else{
+    playGame('scissors')
+  }
+   console.log(event.key);
+   
+})
 function playGame(choice) {
   let computerMove = pickComputerMove();
 
@@ -52,6 +73,7 @@ function playGame(choice) {
       result.innerHTML = `You Win`;
     }
   }
+
   let choiceElement = document.querySelector(".choice");
   choiceElement.innerHTML = `You
   <img src="${choice}-emoji.png" alt="${choice}" style="width: 30px;">
@@ -113,3 +135,5 @@ function autoPlay() {
     c.innerHTML = `Auto Play`;
   }
 }
+
+

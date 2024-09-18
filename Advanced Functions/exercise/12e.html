@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="change()">Add to cart</button>
+    <p></p>
+  </body>
+  <script>
+    function change() {
+      let p = document.querySelector("p");
+      p.innerHTML = "Added";
+      setTimeout(function () {
+        p.innerHTML = "";
+      }, 2000);
+    }
+  </script>
+</html>

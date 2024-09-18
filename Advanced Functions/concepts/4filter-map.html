@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //filter method map
+    const marks = [29, 45, 78, 90, 85, 23, 56, 78, 54];
+    const marksGreaterThan30 = marks.filter((marks, index) => {
+      //   if (value > 30) {
+      //     return true;
+      //   } else {
+      //     return false;
+      //   }
+      return marks > 30;
+    });
+    console.log(marksGreaterThan30);
+
+    //map method
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const doubleNumbers = numbers.map((value, index) => {
+      return value * 2;
+    });
+    console.log(doubleNumbers);
+  </script>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArrowFunction</title>
+  </head>
+  <body>
+    <button onclick="" class="js-button">Click</button>
+  </body>
+  <script>
+    /*
+    const regularFunction = function (param1, param2) {
+      console.log("hello");
+      return 5;
+    };
+    const arrowFunction = (param1, param2) => {
+      console.log("hello");
+      console.log(param1);
+      console.log(param2);
+    };
+    arrowFunction(1, 2);
+
+    const oneParam = param1 => {
+      console.log(param1 + 1);
+    };
+    oneParam(6);
+    //oneline arrowFunction
+    const onLine=()=> 2+2
+    console.log(onLine());
+     
+    const subject=["compiler design","daa","dbms","rts"];
+    subject.forEach((ele,index) => {
+      console.log(ele);
+      console.log(index);
+    });
+
+    const object1={
+      method:()=>{
+
+      },
+      method(){
+
+      }
+    };
+    */
+
+    const buttonEle = document.querySelector(".js-button");
+    const eventListener = () => {
+      console.log("click1");
+    };
+    buttonEle.addEventListener("click", eventListener);
+    buttonEle.removeEventListener("click", eventListener);
+    
+    buttonEle.addEventListener("click", () => {
+      console.log("click2");
+    });
+  </script>
+</html>

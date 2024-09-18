@@ -35,6 +35,10 @@ function autoPlay() {
   }
 }
 
+document.querySelector('.js-rock-button').addEventListener('click',()=>{
+  playGame('rock')
+})
+
 document.querySelector(".js-rock-button").addEventListener("click", () => {
   playGame("rock");
 });
