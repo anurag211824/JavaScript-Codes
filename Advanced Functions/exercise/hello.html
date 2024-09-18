@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start-btn">Start Listening</button>
+<button id="stop-btn">Stop Listening</button>
+<p><strong>Transcript:</strong></p>
+<div id="output" style="border: 1px solid #ccc; padding: 10px; min-height: 50px;"></div>
+<p><strong>Contact Numbers:</strong></p>
+<div id="contacts" style="border: 1px solid #ccc; padding: 10px; min-height: 50px;"></div>
+
+</body>
+<script>
+    // Check browser compatibility
+window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+if (!window.SpeechRecognition) {
+  console.log("Speech Recognition API not supported in this browser.");
+} else {
+  // Initialize SpeechRecognition
+  const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+
+  // Set language (you can choose 'en-US' or 'hi-IN' for Hindi)
+  recognition.lang = 'en-US'; // or 'hi-IN' for Hindi
+  recognition.interimResults = false; // Get only final results
+  recognition.maxAlternatives = 1; // Return the best matching result
+
+  // Start listening for speech
+  document.querySelector("#start-btn").addEventListener('click', () => {
+    recognition.start();
+    console.log('Listening...');
+  });
+
+  // Stop listening
+  document.querySelector("#stop-btn").addEventListener('click', () => {
+    recognition.stop();
+    console.log('Stopped listening manually.');
+  });
+
+  // Handle the result event
+  recognition.addEventListener('result', (event) => {
+    const transcript = event.results[0][0].transcript.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+    console.log('Transcript:', transcript);
+
+    // Display the transcript
+    document.querySelector("#output").textContent = transcript;
+
+    // Check if the word 'hello' is mentioned
+    if (transcript.includes('hello')) {
+      displayContacts();
+    }
+  });
+
+  // Function to display contact numbers
+  function displayContacts() {
+    const contacts = [
+      'John: +1234567890',
+      'Jane: +0987654321',
+      'Smith: +1122334455',
+      'Emily: +2233445566',
+      'Michael: +3344556677'
+    ];
+
+    const contactsDiv = document.querySelector("#contacts");
+    contactsDiv.innerHTML = ''; // Clear previous contacts
+
+    contacts.forEach(contact => {
+      const p = document.createElement('p');
+      p.textContent = contact;
+      contactsDiv.appendChild(p);
+    });
+  }
+
+  // Handle errors
+  recognition.addEventListener('error', (event) => {
+    console.log('Error occurred in recognition:', event.error);
+  });
+
+  // Automatically stop listening after getting the result
+  recognition.addEventListener('end', () => {
+    console.log('Stopped listening automatically after getting a result.');
+  });
+}
+
+</script>
+</html>

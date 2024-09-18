@@ -11,7 +11,7 @@
 <script>
     let count=1
 function change(){
-    setTimeout(function(){
+    setTimeout(()=>{
         let btn = document.querySelector("button");
         btn.innerHTML = "Finished";
         console.log(count++);

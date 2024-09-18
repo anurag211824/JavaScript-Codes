@@ -69,5 +69,5 @@ const ageCounts = users.reduce(function(acc, curr) {
     return acc;
 }, {});
 
-//console.log("Age counts:", ageCounts); 
+console.log("Age counts:", ageCounts); 
 // Output: {20: 2, 21: 3, 22: 2}
