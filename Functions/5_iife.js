@@ -2,13 +2,13 @@
 
 // Named IIFE
 (function chai() {
-    console.log(`DB CONNECTED`);
+  console.log(`DB CONNECTED`);
 })(); // The function is defined and immediately invoked
 
 // IIFE using an arrow function
 ((name) => {
-    console.log(`DB CONNECTED TWO ${name}`);
-})('hitesh'); // The function is defined and immediately invoked with the argument 'hitesh'
+  console.log(`DB CONNECTED TWO ${name}`);
+})("hitesh"); // The function is defined and immediately invoked with the argument 'hitesh'
 
 // Explanation:
 
@@ -20,12 +20,21 @@
 
 // Example 1: Named IIFE
 (function chai() {
-    // This code runs immediately when the script is executed
-    console.log(`DB CONNECTED`); // Logs: "DB CONNECTED"
+  // This code runs immediately when the script is executed
+  console.log(`DB CONNECTED`); // Logs: "DB CONNECTED"
 })();
 
 // Example 2: IIFE using an arrow function
 ((name) => {
-    // This code runs immediately when the script is executed
-    console.log(`DB CONNECTED TWO ${name}`); // Logs: "DB CONNECTED TWO hitesh"
-})('hitesh'); // The string 'hitesh' is passed as an argument to the IIFE
+  // This code runs immediately when the script is executed
+  console.log(`DB CONNECTED TWO ${name}`); // Logs: "DB CONNECTED TWO hitesh"
+})("hitesh"); // The string 'hitesh' is passed as an argument to the IIFE
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// Immediately Invoked Function Expressio
+var result = (function (a, b) {
+  console.log(a + b);
+  return a + b;
+})(4, 8);
+
+console.log(result);
