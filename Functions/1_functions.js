@@ -128,3 +128,38 @@ let percentage = function (totalMarks, obtainedMarks) {
 };
 
 //console.log(percentage(500,445));
+
+let arr = [8, 3, 4, 2, 1, 3, 4];
+
+let doubleArray = arr.map((currEle) => {
+  return 2 * currEle;
+});
+console.log(`the doubled array is: ${doubleArray}`);
+
+let array = [1, 2, 3, , 55, 6, 7, , 2, , 17, 9, 3, 2, 4, 6];
+
+let oddarray = array.filter((currEle) => {
+  if (currEle % 2 == 1) {
+    return currEle;
+  } else {
+    return 0;
+  }
+});
+console.log(`the odd Array is ${oddarray}`);
+
+let arraySum = array.reduce((accum, currEle) => {
+  return accum + currEle;
+}, 0);
+console.log(`The sum of array is ${arraySum}`);
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const sumofEvenNumbers = numbers
+  .filter((currEle) => {
+    return currEle % 2 == 0;
+  })
+  .reduce((accum, currEle) => {
+    return accum + currEle;
+  }, 0);
+
+console.log(`The sum of even numbers is ${sumofEvenNumbers}`);
