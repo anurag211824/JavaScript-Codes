@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Data Types</title>
+    <style>
+      /* General Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      /* Navbar Styling */
+      .navbar {
+        background-color: #2d3748;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .navbar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 15px;
+        font-size: 1.1rem;
+        border-radius: 5px;
+      }
+
+      .navbar a:hover {
+        background-color: #4a5568;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #2d3748;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #2d3748;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #4a5568;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        margin-left: 20px;
+        color: #4a5568;
+      }
+
+      li {
+        margin-bottom: 5px;
+      }
+
+      pre {
+        background-color: #f0f0f0;
+        padding: 15px;
+        border-radius: 8px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+      }
+
+      code {
+        font-family: "Courier New", Courier, monospace;
+        color: #2b6cb0;
+      }
+
+      .section {
+        margin-bottom: 40px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .navbar a {
+          padding: 8px 16px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="1Intro.html">Introduction</a>
+      <a href="2DataTypes.html">Data Types</a>
+      <a href="3Examples.html">Examples</a>
+      <a href="4Conversion.html">Type Conversion</a>
+      <a href="5Operators.html">Operators in JavaScript</a>
+      <a href="6ControlFlow.html">Control Flow: if, else, switch</a>
+      <a href="7Functions.html">Functions in JavaScript</a>
+      <a href="8Objects.html">Working with Objects</a>
+      <a href="9Arrays.html">Working with Arrays</a>
+      <a href="10ES6Features.html">New Features in ES6</a>
+      <a href="11Asynchronous.html">Asynchronous Programming</a>
+      <a href="12Promises.html">Promises in JavaScript</a>
+      <a href="13AsyncAwait.html">Async/Await in JavaScript</a>
+      <a href="14ErrorHandling.html">Error Handling in JavaScript</a>
+      <a href="15DOMManipulation.html">DOM Manipulation</a>
+      <a href="16Events.html">Event Handling in JavaScript</a>
+      <a href="17JSON.html">Working with JSON</a>
+      <a href="18LocalStorage.html">Local Storage in JavaScript</a>
+      
+    </div>
+  
+
+    <div class="container">
+      <h1>JavaScript Data Types</h1>
+
+      <div class="section">
+        <h2>Introduction</h2>
+        <p>
+          JavaScript supports different data types, which are divided into
+          primitive and non-primitive (also called reference) types. These types
+          are used to represent different kinds of values in the language.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Primitive Data Types</h2>
+        <p>
+          Primitive types are basic data types that are immutable and are not
+          objects. These include:
+        </p>
+        <ul>
+          <li>
+            <strong>Number</strong>: Represents both integer and floating point
+            numbers.
+          </li>
+          <li>
+            <strong>String</strong>: Represents a sequence of characters
+            enclosed in quotes.
+          </li>
+          <li>
+            <strong>Boolean</strong>: Represents a logical entity that can be
+            either true or false.
+          </li>
+          <li>
+            <strong>Undefined</strong>: A variable that has not been assigned a
+            value is of type undefined.
+          </li>
+          <li>
+            <strong>Null</strong>: Represents the intentional absence of any
+            object value.
+          </li>
+          <li>
+            <strong>Symbol</strong>: A unique and immutable value, typically
+            used as identifiers for object properties.
+          </li>
+          <li>
+            <strong>BigInt</strong>: Represents large integers that can't be
+            represented by the Number type.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Non-Primitive Data Types</h2>
+        <p>
+          Non-primitive types are reference types, meaning they are objects and
+          can store collections of data. The most common non-primitive types
+          are:
+        </p>
+        <ul>
+          <li>
+            <strong>Object</strong>: A collection of key-value pairs, such as
+            arrays, functions, or other complex structures.
+          </li>
+          <li>
+            <strong>Array</strong>: An ordered collection of elements, where
+            each element is accessible by an index.
+          </li>
+          <li>
+            <strong>Function</strong>: A block of code designed to perform a
+            particular task, often returning a value.
+          </li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Examples</h2>
+        <pre><code>
+// Example of Primitive Types
+let num = 42;            // Number
+let name = "Anurag";     // String
+let isActive = true;     // Boolean
+let unknownValue = null; // Null
+let uniqueSymbol = Symbol('symbol'); // Symbol
+let bigNumber = 1234567890123456789012345678901234567890n; // BigInt
+
+// Example of Non-Primitive Types
+let person = { name: "Anurag", age: 21 }; // Object
+let numbers = [1, 2, 3, 4, 5];            // Array
+function greet() { console.log("Hello!"); } // Function
+            </code></pre>
+      </div>
+
+      <div class="section">
+        <h2>Type Conversion</h2>
+        <p>
+          JavaScript also allows you to convert between data types, such as from
+          string to number, or boolean to string:
+        </p>
+        <ul>
+          <li><strong>String to Number:</strong> <code>Number("42")</code></li>
+          <li><strong>Number to String:</strong> <code>String(42)</code></li>
+          <li><strong>Boolean to String:</strong> <code>String(true)</code></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Conclusion</h2>
+        <p>
+          JavaScript data types are fundamental to how the language works.
+          Understanding how to use and manipulate them is crucial for effective
+          programming in JavaScript.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Adder</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f4f8;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 2em;
+        color: #4a90e2;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      input[type="number"] {
+        padding: 10px;
+        font-size: 1.2em;
+        margin: 10px 0;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        width: 250px;
+        box-sizing: border-box;
+      }
+
+      input[type="number"]:focus {
+        outline: none;
+        border-color: #4a90e2;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1.2em;
+        color: white;
+        background-color: #4a90e2;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #357ab7;
+      }
+
+      span {
+        font-size: 1.5em;
+        color: #4a90e2;
+        font-weight: bold;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+       /* Navbar Styling */
+       .navbar {
+            background-color: #2d3748;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #4a5568;
+        }
+
+        .prevResults{
+          display: flex;
+          flex-direction: row;
+          gap:2px;
+        }
+      
+
+    </style>
+    <script src="1script.js" defer></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="1Intro.html">Introduction</a>
+      <a href="2DataType.html">Data Types</a>
+      <a href="3Examples.html">Examples</a>
+      <a href="4Conversion.html">Type Conversion</a>
+  </div>
+    <div class="container">
+      <h1>Simple Adder</h1>
+      <p>Enter the value a:</p>
+      <input class="a" type="number" />
+      <p>Enter the value b:</p>
+      <input class="b" type="number" />
+      <br />
+      <button>ADD</button>
+      <button class="local">Clear Local Storage</button>
+      <p>Result:</p>
+      <span></span>
+      <p class="prevResults"></p>
+    </div>
+  </body>
+</html>

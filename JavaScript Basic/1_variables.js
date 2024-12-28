@@ -41,4 +41,3 @@ let accountState // undefined
 // console.log(accountid);
 
 console.table({ accountid, accountEmail, accountCity ,accountState});
-
