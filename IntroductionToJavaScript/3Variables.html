@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 1.1em;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-left: 3px solid #ccc;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Variables</h1>
+    <p>In JavaScript, variables are used to store data values. They can be declared using the keywords <code>var</code>, <code>let</code>, or <code>const</code>.</p>
+
+    <h2>1. <code>var</code></h2>
+    <p>The <code>var</code> keyword was traditionally used to declare variables. Variables declared with <code>var</code> are function-scoped and can be redeclared and updated.</p>
+    <pre><code>var x = 10;
+console.log(x); // Output: 10</code></pre>
+
+    <h2>2. <code>let</code></h2>
+    <p>The <code>let</code> keyword is block-scoped and is recommended for most use cases. Variables declared with <code>let</code> cannot be redeclared but can be updated.</p>
+    <pre><code>let y = 20;
+console.log(y); // Output: 20</code></pre>
+
+    <h2>3. <code>const</code></h2>
+    <p>The <code>const</code> keyword is also block-scoped and is used for variables that should not be reassigned. The value of a <code>const</code> variable cannot be changed once it is set.</p>
+    <pre><code>const z = 30;
+console.log(z); // Output: 30</code></pre>
+
+    <h2>Variable Scope</h2>
+    <p>Scope determines where variables can be accessed or modified in your code. JavaScript has three types of scope:</p>
+    <ul>
+        <li><strong>Global Scope:</strong> Variables declared outside any function are in the global scope.</li>
+        <li><strong>Function Scope:</strong> Variables declared with <code>var</code> inside a function are scoped to that function.</li>
+        <li><strong>Block Scope:</strong> Variables declared with <code>let</code> or <code>const</code> are scoped to the block in which they are defined.</li>
+    </ul>
+
+    <h2>Examples</h2>
+    <pre><code>// Global Scope
+var globalVar = "I am global";
+
+function testScope() {
+    // Function Scope
+    var functionVar = "I am function-scoped";
+
+    if (true) {
+        // Block Scope
+        let blockVar = "I am block-scoped";
+        const blockConst = "I am also block-scoped";
+        console.log(blockVar); // Output: I am block-scoped
+        console.log(blockConst); // Output: I am also block-scoped
+    }
+
+    console.log(functionVar); // Output: I am function-scoped
+    // console.log(blockVar); // Error: blockVar is not defined
+}
+
+testScope();
+</code></pre>
+
+    <h2>Conclusion</h2>
+    <p>Use <code>let</code> and <code>const</code> for better scoping and to avoid issues with redeclaration and hoisting. Reserve <code>var</code> for legacy code or specific cases where function scope is required.</p>
+</body>
+</html>
