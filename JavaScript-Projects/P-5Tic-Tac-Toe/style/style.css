@@ -36,6 +36,8 @@
     color: black;
     font-size: 50px;
     background-color: aliceblue;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
   }
   .message {
     margin-top: 10px;
