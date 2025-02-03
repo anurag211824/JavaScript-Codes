@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #444;
+        }
+        #userInfo {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            border: none;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            transform: scale(1.05);
+        }
+        .btn:active {
+            transform: scale(0.95);
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Profile</h2>
+        <p id="userInfo" class="hidden">
+            <strong>Name:</strong> <span id="fullName"></span> <br>
+            <strong>Age:</strong> <span id="age"></span> <br>
+            <strong>Education:</strong> <span id="education"></span> <br>
+            <strong>Skills:</strong> <span id="skills"></span>
+        </p>
+        <button class="btn" onclick="showUser()">Show User</button>
+    </div>
+
+    <script>
+        const user = {
+            firstName: "John",
+            lastName: "Doe",
+            age: 30,
+            education: 12,
+            skills: ["JavaScript", "React", "Node.js"],
+            getFullName: function() {
+                return `${this.firstName} ${this.lastName}`;
+            }
+        };
+
+        let displayed = false;
+
+        function showUser() {
+            const userInfo = document.getElementById('userInfo');
+            if (!displayed) {
+                document.getElementById('fullName').textContent = user.getFullName();
+                document.getElementById('age').textContent = user.age;
+                document.getElementById('education').textContent = user.education;
+                document.getElementById('skills').textContent = user.skills.join(", ");
+                userInfo.classList.remove('hidden');
+                displayed = true;
+            } else {
+                userInfo.classList.add('hidden');
+                displayed = false;
+            }
+        }
+    </script>
+</body>
+</html>

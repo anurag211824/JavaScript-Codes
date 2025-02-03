@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy and Falsy Values in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        ul {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .note {
+            background: #ffffcc;
+            padding: 10px;
+            border-left: 4px solid #ffcc00;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Truthy and Falsy Values in JavaScript</h1>
+    
+    <h2>Falsy Values (Only 8 in JavaScript)</h2>
+    <p>These values evaluate to <strong>false</strong> in a boolean context:</p>
+    <ul>
+        <li>false</li>
+        <li>0 (Number zero)</li>
+        <li>-0 (Negative zero)</li>
+        <li>0n (BigInt zero)</li>
+        <li>"" (Empty string)</li>
+        <li>null</li>
+        <li>undefined</li>
+        <li>NaN (Not a Number)</li>
+    </ul>
+    
+    <h2>Truthy Values</h2>
+    <p>Everything except the above falsy values is considered <strong>truthy</strong> in JavaScript. Here are some common examples:</p>
+    <ul>
+        <li>true</li>
+        <li>Any non-zero number (e.g., 5, -3, 3.14)</li>
+        <li>Any non-empty string (e.g., "hello", '0', "false")</li>
+        <li>Any object (e.g., {}, [])</li>
+        <li>Any array (even empty [])</li>
+        <li>Any function (e.g., function() {})</li>
+        <li>Any non-zero BigInt (e.g., 1n, -10n)</li>
+        <li>Infinity and -Infinity</li>
+    </ul>
+    
+    <div class="note">
+        <strong>💡 Special Case:</strong> "0" (a string containing zero) is truthy, but 0 (a number) is falsy.
+    </div>
+</body>
+</html>
