@@ -46,3 +46,10 @@ const users = [
 // Create a list of first names and last names of users
 const outputarr1 = users.map((x) => x.firstname + " " + x.lastname);
 console.log("First and last names of users:", outputarr1); // Output: ["anurag kumar", "deepak sharma", "abhinav shrivastav", "akash kumar", "ayush kumar", "bhaskar bhist", "anshul bhatt"]
+
+
+const investements=[1000,2000,3000,1200,9000]
+const investementsDouble=investements.map((x,index)=>{
+  return x=x*2;
+})
+console.log(investementsDouble);

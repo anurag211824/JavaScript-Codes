@@ -71,3 +71,8 @@ const ageCounts = users.reduce(function(acc, curr) {
 
 console.log("Age counts:", ageCounts); 
 // Output: {20: 2, 21: 3, 22: 2}
+
+
+const countingNumbers=[1,2,3,4,5,6,7,8,9,10]
+let sum=countingNumbers.reduce((accumulator,number)=>accumulator+number,0)
+console.log("Sum of Numbers:", sum);
