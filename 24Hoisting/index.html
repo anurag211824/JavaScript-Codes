@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Hoisting Demo</h2>
+    <button onclick="demoHoisting()">Run Hoisting Demo</button>
+    <p id="output"></p>
+
+    <script src="script.js">
+        function demoHoisting() {
+            let output = document.getElementById("output");
+            output.innerHTML = "Check console for results";
+            
+            console.log(a); // Undefined (var is hoisted but not initialized)
+            var a = "Anurag";
+
+            sayHi(); // Works (Function declaration is hoisted fully)
+
+            function sayHi() {
+                console.log("Hi");
+            }
+
+            try {
+                addNum(); // Error: addNum is not a function (only variable is hoisted, not assignment)
+            } catch (error) {
+                console.error(error);
+            }
+
+            var addNum = function () {
+                console.log(2 + 2);
+            };
+        }
+    </script>
+</body>
+</html>
