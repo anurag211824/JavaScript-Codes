@@ -7,8 +7,8 @@ console.log(username1, username2); // username1 remains unchanged
 // Array Reference Behavior
 const fruits = ["apple", "banana", "cherry"];
 const myFruits = fruits; // Reference Copy
-
 myFruits.push('dates', 'grapes');
+myFruits[2]='mango'
 console.log(myFruits); // Modified array
 console.log(fruits);   // Original array also changed (reference behavior)
 
@@ -38,6 +38,7 @@ console.log(student1, student2);
 // Creating a Shallow Copy of an Array
 const myFriends1 = ['abhinav', 'anshul', 'deepak', 'garima', 'bhaskar'];
 const myFriends2 = [...myFriends1, 'Himanshi']; // Spread operator to copy & add new element
+myFriends1.push('tanishq')
 console.log(myFriends1);
 console.log(myFriends2);
 

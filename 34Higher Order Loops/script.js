@@ -156,7 +156,7 @@ for (const key of personkeys){
     //console.log(person[key]);
 }
 const personValues=Object.values(person)
-//console.log(personValues);
+console.log(personValues);
 
 const personEntries=Object.entries(person)
 //console.log(personEntries);
@@ -165,14 +165,10 @@ fruits.forEach((fruit)=>{
     //console.log(fruit);
 })
 
-
-
-
-
 // Pass the function reference to forEach
 fruits.forEach(function filterFruitsHavingA(fruit) {
     if (fruit.includes("z")) {
-        console.log(fruit);
+        //console.log(fruit);
     }
 });
 
