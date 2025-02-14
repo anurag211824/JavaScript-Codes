@@ -1,0 +1,108 @@
+# Document Object Model (DOM) - Notes
+
+## 1. Introduction to the Document Object Model (DOM)
+- The DOM is a programming interface for web documents.
+- It represents the structure of an HTML or XML document as a tree of objects.
+- Developers can manipulate HTML elements dynamically using JavaScript.
+
+## 2. Importance of the DOM in Web Development
+- Essential for making responsive web designs.
+- Allows dynamic interaction and updates to web pages without reloading.
+- Helps in modifying styles, content, and attributes of elements.
+
+## 3. Hierarchy of Elements in the DOM
+- The DOM is structured like a tree, where:
+  - The `document` is the root node.
+  - `HTML` is the top-level element containing `head` and `body`.
+  - Each tag within `body` forms a node in the tree.
+  - Elements can have parent, child, and sibling relationships.
+
+## 4. Parent and Children Elements in the DOM
+- **Parent elements**: Elements that contain other elements (e.g., `<ul>` is the parent of `<li>`).
+- **Child elements**: Elements inside a parent (e.g., `<li>` is a child of `<ul>`).
+- **Siblings**: Elements that share the same parent.
+
+## 5. Creating Elements in the DOM
+- New elements can be created dynamically using JavaScript.
+- Example:
+  ```javascript
+  let newElement = document.createElement("div");
+  newElement.textContent = "Hello, World!";
+  document.body.appendChild(newElement);
+  ```
+- Common methods: `createElement()`, `appendChild()`, `insertBefore()`.
+
+## 6. HTML Attributes and Properties
+- HTML elements have various attributes (like `id`, `class`, `src`, `href`).
+- JavaScript allows manipulation of these attributes:
+  ```javascript
+  document.getElementById("myImage").src = "new-image.jpg";
+  ```
+- Some properties (like `value` in input fields) can also be modified dynamically.
+
+## 7. Storing Information in the DOM
+- The DOM stores HTML as objects with properties.
+- JavaScript can retrieve and modify these properties.
+- Example:
+  ```javascript
+  let heading = document.getElementById("title").textContent;
+  console.log(heading);
+  ```
+
+## 8. Modifying HTML Elements using JavaScript
+- JavaScript allows dynamic modification of HTML elements:
+  - Change content (`textContent`, `innerHTML`).
+  - Update styles (`style` property).
+  - Modify classes (`classList` methods).
+
+## 9. Difference Between `textContent` and `innerHTML`
+- **`textContent`**: Returns or sets only the text inside an element, ignoring HTML.
+- **`innerHTML`**: Returns or sets HTML content inside an element.
+- Example:
+  ```javascript
+  document.getElementById("demo").textContent = "<b>Hello</b>"; // Displays as plain text
+  document.getElementById("demo").innerHTML = "<b>Hello</b>"; // Displays as bold text
+  ```
+
+## 10. Updating Image Source Dynamically
+- JavaScript can change an image’s `src` attribute dynamically.
+- Example:
+  ```javascript
+  document.getElementById("myImage").src = "newImage.png";
+  ```
+
+## 11. How the DOM Represents the Browser Window
+- The DOM provides access to the entire web page and browser environment.
+- The `window` object represents the browser window.
+- Example:
+  ```javascript
+  console.log(window.innerWidth); // Gets browser width
+  ```
+
+## 12. Creating and Accessing Global Variables in the DOM
+- Variables declared with `var` in the global scope can be accessed via `window`.
+- Example:
+  ```javascript
+  var globalVar = "Hello";
+  console.log(window.globalVar); // Outputs: Hello
+  ```
+
+## 13. Selecting and Manipulating Elements in the DOM
+- Methods to select elements:
+  - `document.getElementById("id")`
+  - `document.getElementsByClassName("class")`
+  - `document.getElementsByTagName("tag")`
+  - `document.querySelector("selector")`
+  - `document.querySelectorAll("selector")`
+- Example:
+  ```javascript
+  document.querySelector(".btn").style.backgroundColor = "blue";
+  ```
+
+## 14. Selecting Elements in the DOM
+- Selecting multiple elements and looping through them:
+  ```javascript
+  let items = document.querySelectorAll(".list-item");
+  items.forEach(item => item.style.color = "red");
+  ```
+- Understanding the difference between `querySelectorAll()` (NodeList) and `getElementsByClassName()` (HTMLCollection).
