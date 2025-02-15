@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Difference Between Element and Node in JavaScript DOM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h1,
+      h2 {
+        color: #333;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        background: white;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background: #ddd;
+      }
+      code {
+        background: #eee;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      pre {
+        background: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Difference Between Element and Node in JavaScript DOM</h1>
+
+    <h2>1. What is a Node?</h2>
+    <p>
+      A <strong>node</strong> is any object in the DOM hierarchy. There are
+      different types of nodes:
+    </p>
+    <ul>
+      <li>
+        <strong>Element nodes:</strong> Represent HTML elements like
+        <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>
+      </li>
+      <li><strong>Text nodes:</strong> Contain text inside elements</li>
+      <li>
+        <strong>Comment nodes:</strong> Represent comments (<code
+          >&lt;!-- This is a comment --&gt;</code
+        >)
+      </li>
+      <li>
+        <strong>Document node:</strong> Represents the entire HTML document
+      </li>
+    </ul>
+
+    <h2>2. What is an Element?</h2>
+    <p>
+      An <strong>element</strong> is a specific type of node (NodeType 1) that
+      represents an HTML tag in the DOM. It can contain attributes, styles, and
+      child nodes.
+    </p>
+
+    <h2>3. Key Differences</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Node</th>
+        <th>Element</th>
+      </tr>
+      <tr>
+        <td><strong>Definition</strong></td>
+        <td>Any object in the DOM hierarchy</td>
+        <td>A specific type of node (NodeType 1)</td>
+      </tr>
+      <tr>
+        <td><strong>Types</strong></td>
+        <td>Can be element, text, comment, document, etc.</td>
+        <td>Only represents an HTML tag</td>
+      </tr>
+      <tr>
+        <td><strong>Example</strong></td>
+        <td>Text nodes, comment nodes, element nodes</td>
+        <td>
+          <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>,
+          <code>&lt;span&gt;</code>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Access</strong></td>
+        <td><code>document.childNodes</code> (includes text/comments)</td>
+        <td><code>document.children</code> (only elements)</td>
+      </tr>
+    </table>
+
+    <h2>4. Example Code</h2>
+    <p>Consider the following HTML:</p>
+    <pre>
+&lt;div id="example"&gt;Hello&lt;/div&gt;
+    </pre>
+
+    <p>And the following JavaScript:</p>
+    <pre>
+let div = document.getElementById("example");
+
+// div is an Element node (NodeType 1)
+console.log(div.nodeType); // Output: 1
+
+// Text node inside the div
+console.log(div.firstChild.nodeType); // Output: 3 (Text Node)
+    </pre>
+
+    <h2>5. Summary</h2>
+    <ul>
+      <li>
+        <strong
+          >Every element is a node, but not every node is an element.</strong
+        >
+      </li>
+      <li>
+        <strong
+          >Elements represent actual HTML tags, while nodes can include text,
+          comments, and more.</strong
+        >
+      </li>
+      <li>
+        <strong
+          ><code>childNodes</code> gives all nodes, while
+          <code>children</code> only returns elements.</strong
+        >
+      </li>
+    </ul>
+
+    <script src="script.js"></script>
+  </body>
+</html>

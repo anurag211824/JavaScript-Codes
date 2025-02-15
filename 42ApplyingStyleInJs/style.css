@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Profile Section */
+.profile {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.name {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.profession {
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background: white;
+    color: #6e8efb;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a777e3;
+    color: white;
+}
+
+/* About Section */
+.about {
+    padding: 15px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+.about h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Skills Section */
+.skills {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.skills h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.html {
+    width: 90%;
+    background: #ff5733;
+}
+
+.css {
+    width: 85%;
+    background: #3498db;
+}
+
+.js {
+    width: 70%;
+    background: #f1c40f;
+}

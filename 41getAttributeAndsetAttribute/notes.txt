@@ -1,0 +1,92 @@
+**JavaScript: `setAttribute` and `getAttribute` Methods**
+
+### **1. `setAttribute(attributeName, value)`**
+The `setAttribute` method is used to add or modify an attribute of an HTML element.
+
+#### **Syntax:**
+```js
+element.setAttribute(attributeName, value);
+```
+- `attributeName`: The name of the attribute to set (e.g., `title`, `id`, `class`).
+- `value`: The value to assign to the attribute.
+
+#### **Example:**
+```js
+document.querySelector('h2').setAttribute('title', 'helloWorld');
+```
+This sets the `title` attribute of the `<h2>` element to "helloWorld".
+
+#### **Common Mistakes:**
+- Ensure the attribute name is a valid string.
+- Verify that the selected element exists before calling `setAttribute`.
+
+---
+
+### **2. `getAttribute(attributeName)`**
+The `getAttribute` method retrieves the value of a specified attribute of an element.
+
+#### **Syntax:**
+```js
+let value = element.getAttribute(attributeName);
+```
+- `attributeName`: The name of the attribute to retrieve.
+
+#### **Example:**
+```js
+let titleValue = document.querySelector('h2').getAttribute('title');
+console.log(titleValue); // Outputs: 'helloWorld'
+```
+
+#### **Common Errors:**
+- Calling `getAttribute()` without an argument results in an error:
+  ```js
+  document.querySelector('h2').getAttribute();
+  ```
+  **Error:** "Failed to execute 'getAttribute' on 'Element': 1 argument required, but only 0 present."
+- Always pass a valid attribute name to `getAttribute`.
+
+---
+
+### **3. Setting and Retrieving Custom Attributes**
+HTML elements support custom attributes, which can be added using `setAttribute` and retrieved using `getAttribute`.
+
+#### **Example:**
+```js
+document.querySelector('h2').setAttribute('hi', 'anurag');
+console.log(document.querySelector('h2').getAttribute('hi')); // Output: 'anurag'
+```
+
+---
+
+### **4. Accessing Element ID**
+The `id` attribute can be accessed directly using the `.id` property.
+
+#### **Example:**
+```js
+console.log(document.querySelector('h1').id);
+```
+If the `<h1>` tag has an `id`, it will print its value.
+
+---
+
+### **5. Event-Based Attribute Setting**
+To ensure attributes are set only after the document is loaded, use `DOMContentLoaded`:
+
+#### **Example:**
+```js
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector('h2').setAttribute('title', 'helloWorld');
+});
+```
+
+---
+
+### **Summary**
+| Method | Description | Example |
+|--------|------------|---------|
+| `setAttribute(name, value)` | Sets an attribute on an element | `element.setAttribute('title', 'hello')` |
+| `getAttribute(name)` | Retrieves the value of an attribute | `element.getAttribute('title')` |
+| `.id` | Accesses the `id` attribute directly | `element.id` |
+
+These methods are useful for dynamically modifying and retrieving attributes in JavaScript.
+
