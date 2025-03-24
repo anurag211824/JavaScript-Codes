@@ -56,3 +56,13 @@ Concepts Covered:
 3. **Callback Queue** - Stores async callbacks after Web API completion
 4. **Event Loop** - Moves tasks from Callback Queue to Call Stack when empty
 */
+
+
+
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => {
+    console.log(i+1);
+  }, 2000);
+  console.log(i);
+}
+
