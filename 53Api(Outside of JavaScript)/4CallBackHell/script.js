@@ -8,6 +8,12 @@ function makeHttpRequest(method,url,callback){
     xhr.open(method,url)
     xhr.send()
 }
+
+
+
+
+
+//Callback Hell
 makeHttpRequest('GET','https://dummyjson.com/users',(usersData)=>{
     console.log(usersData);
   makeHttpRequest('GET',`https://dummyjson.com/posts/user/${usersData.users[0].id}`,(postData)=>{
