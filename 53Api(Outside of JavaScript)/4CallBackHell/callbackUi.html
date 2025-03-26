@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            color: white;
+        }
+        .signup { background-color: blue; }
+        .login { background-color: green; }
+        .fetchUser { background-color: purple; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p id="message">Hello, please sign up!</p>
+        <button id="actionButton" class="signup" onclick="signUp()">Sign Up</button>
+    </div>
+
+    <script>
+        let step = "signup";
+
+        function signUp() {
+            updateMessage("Signing up...");
+            setTimeout(() => {
+                updateMessage("Hello Anurag!");
+                updateButton("Login", "login", login);
+            }, 2000);
+        }
+
+        function login() {
+            updateMessage("Logging in...");
+            setTimeout(() => {
+                updateMessage("You are now logged in!");
+                updateButton("Fetch User", "fetchUser", fetchUser);
+            }, 2000);
+        }
+
+        function fetchUser() {
+            updateMessage("Fetching user data...");
+            setTimeout(() => {
+                updateMessage("Here is Your Database...");
+                document.getElementById("actionButton").style.display = "none";
+            }, 2000);
+        }
+
+        function updateMessage(text) {
+            document.getElementById("message").textContent = text;
+        }
+
+        function updateButton(text, className, callback) {
+            let button = document.getElementById("actionButton");
+            button.textContent = text;
+            button.className = className;
+            button.onclick = callback;
+        }
+    </script>
+</body>
+</html>

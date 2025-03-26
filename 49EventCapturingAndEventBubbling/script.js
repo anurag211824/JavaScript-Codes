@@ -59,3 +59,79 @@ blue.addEventListener('click', (e) => {
 blue.addEventListener('click', (e) => {
     console.log('1. Blue Event Listener (Once)');
 }, {once: true})
+
+
+
+
+// const green = document.querySelector('.green');
+// const pink = document.querySelector('.pink');
+// const blue = document.querySelector('.blue');
+
+// /*
+// EVENT BUBBLING (capture: false)
+// - Starts from the target element and bubbles up to ancestors.
+
+// EVENT CAPTURING (capture: true)
+// - Starts from the window and goes down to the target element.
+
+// Clicking the blue box will show both bubbling and capturing logs.
+// */
+
+// // Window event listeners
+// window.addEventListener('click', (e) => {
+//     console.log('Capture: Window');
+// }, {capture: true}); // Capturing phase
+
+// window.addEventListener('click', (e) => {
+//     console.log('Bubble: Window');
+// }, {capture: false}); // Bubbling phase
+
+// // Document event listeners
+// document.addEventListener('click', (e) => {
+//     console.log('Capture: Document');
+// }, {capture: true});
+
+// document.addEventListener('click', (e) => {
+//     console.log('Bubble: Document');
+// }, {capture: false});
+
+// // Body event listeners
+// document.body.addEventListener('click', (e) => {
+//     console.log('Capture: Body');
+// }, {capture: true});
+
+// document.body.addEventListener('click', (e) => {
+//     console.log('Bubble: Body');
+// }, {capture: false});
+
+// // Green element event listeners
+// green.addEventListener('click', (e) => {
+//     console.log('Capture: Green');
+// }, {capture: true});
+
+// green.addEventListener('click', (e) => {
+//     console.log('Bubble: Green');
+// }, {capture: false});
+
+// // Pink element event listeners
+// pink.addEventListener('click', (e) => {
+//     console.log('Capture: Pink');
+// }, {capture: true});
+
+// pink.addEventListener('click', (e) => {
+//     console.log('Bubble: Pink');
+// }, {capture: false});
+
+// // Blue element event listeners
+// blue.addEventListener('click', (e) => {
+//     console.log('Capture: Blue');
+// }, {capture: true});
+
+// blue.addEventListener('click', (e) => {
+//     console.log('Bubble: Blue');
+// }, {capture: false});
+
+// // Blue element event listener that runs only once
+// blue.addEventListener('click', (e) => {
+//     console.log('Blue Event Listener (Once)');
+// }, {once: true});

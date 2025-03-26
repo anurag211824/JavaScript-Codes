@@ -1,7 +1,7 @@
 const addCardBtn = document.querySelector('.add-card')
 const container = document.querySelector('.container')
 
-const cardsList = document.querySelectorAll('.card')
+//const cardsList = document.querySelectorAll('.card')
 
 let count = 1
 
