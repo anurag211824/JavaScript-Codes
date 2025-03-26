@@ -65,6 +65,5 @@ console.log(mySubjects.splice(2, 2, 'Data Structure and Algorithms', 'Constituti
 console.log(mySubjects);
 
 //Multidimensional array
-
 const multiArray = [['X', 'O', 'O'], ['O', 'O', 'O'], ['O', 'O', 'X']];
 console.log(multiArray[0][2]);

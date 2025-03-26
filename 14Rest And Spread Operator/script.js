@@ -27,7 +27,7 @@ console.log("Original Array:", original);
 console.log("Duplicate Array:", duplicate);
 
 // ✅ Spreading Strings into Arrays
-let word="Hello"
+let word="Hello i am anurag"
 let stringArray=[...word]
 console.log(stringArray);
 

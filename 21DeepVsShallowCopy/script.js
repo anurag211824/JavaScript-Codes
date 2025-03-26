@@ -74,7 +74,7 @@ customer2.cart.push('books');
 console.log(customer1);
 console.log(customer2);
 
-// To create a Deep Copy (avoid modifying nested objects), use structuredClone()
+//To create a Deep Copy (avoid modifying nested objects), use structuredClone()
 const customer3 = structuredClone(customer1);
 customer3.pata.city = 'Mumbai';
 customer3.cart.push('shoes');
