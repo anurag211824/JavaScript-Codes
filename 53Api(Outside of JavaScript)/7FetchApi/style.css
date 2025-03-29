@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Kumbh Sans", sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.products{
+    max-width: 1250px;
+    margin: 10px auto;
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+}
+
+
+.products div {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    padding: 10px;
+    height:400px;
+    overflow-y: scroll;
+    
+  }
+  
+  .products div:hover {
+    transform: translateY(-5px);
+  }
+  
+  .products h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .products p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .products img {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+
+  
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .products {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    .products {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For very small screens */
+  @media (max-width: 480px) {
+    .products {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  /* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* For Edge and IE */
+  body {
+    -ms-overflow-style: none;
+  }
+  
