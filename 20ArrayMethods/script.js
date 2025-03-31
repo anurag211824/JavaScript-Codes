@@ -56,6 +56,14 @@ let mySubjects = [
 console.log(mySubjects.slice(1, 3)); // Extracts elements from index 1 to 2
 console.log(mySubjects);
 
+let numbers = [10, 20, 30, 40, 50];
+
+let newNumbers = numbers.slice(1, 4); // Extracts elements from index 1 to 3 (excluding index 4)
+
+console.log(newNumbers); // Output: [20, 30, 40]
+console.log(numbers);    // Output: [10, 20, 30, 40, 50] (Original remains unchanged)
+
+
 // Using splice() (Modifies original array)
 console.log(mySubjects.splice(1, 3)); // Removes 3 elements from index 1
 console.log(mySubjects);
