@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+}
+.container {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 5rem;
+  text-align: center;
+}
+p {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.todo li {
+  list-style: none;
+  background-color: rgb(242, 234, 234);
+  display: flex;
+}
+.todo-style {
+  flex: 1;
+}
+.todo button {
+  display: block;
+}
+.todo {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  gap: 5px;
+}
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+.input-text {
+  flex: 1;
+  padding: 5px;
+  width: 80%;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  gap: 5px;
+}
+.todo-text {
+  text-decoration: line-through;
+}
+.todobtn {
+  border: none;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+}
+.todoo {
+  padding: 5px;
+}
+.addbtn {
+  width: 20%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+}

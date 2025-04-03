@@ -1,11 +1,11 @@
-/*
-Understanding the Event Loop & Callback Queue in JavaScript
-------------------------------------------------------------
-This script demonstrates JavaScript's event loop, call stack, callback queue, 
-and Web APIs through a simple example.
-*/
+// /*
+// Understanding the Event Loop & Callback Queue in JavaScript
+// ------------------------------------------------------------
+// This script demonstrates JavaScript's event loop, call stack, callback queue, 
+// and Web APIs through a simple example.
+// */
 
-// Synchronous Execution - Added to Call Stack and executed immediately
+// // Synchronous Execution - Added to Call Stack and executed immediately
 console.log("Hi-1");
 
 // Function Declaration (Stored in memory, not executed yet)
@@ -18,12 +18,12 @@ for (let i = 0; i <= 5; i++) {
     console.log(i);
 }
 
-// Asynchronous Operation (setTimeout moves to Web API)
-setTimeout(() => {
-    console.log("Hello World after 2 seconds"); // Moves to Callback Queue after 2 sec
-}, 2000);
+// // Asynchronous Operation (setTimeout moves to Web API)
+// setTimeout(() => {
+//     console.log("Hello World after 2 seconds"); // Moves to Callback Queue after 2 sec
+// }, 2000);
 
-// More Synchronous Execution (Executed immediately)
+// // More Synchronous Execution (Executed immediately)
 console.log("Hi-3");
 console.log("Hi-2");
 
@@ -57,12 +57,10 @@ Concepts Covered:
 4. **Event Loop** - Moves tasks from Callback Queue to Call Stack when empty
 */
 
-
-
 for (let i = 0; i < 3; i++) {
   setTimeout(() => {
     console.log(i+1);
-  }, 2000);
+  }, 5000);
   console.log(i);
 }
 
