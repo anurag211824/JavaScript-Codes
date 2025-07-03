@@ -18,6 +18,7 @@ function makeHttpRequest(method,url){
 }
 
 
+// fixed callback hell using promises
 makeHttpRequest('GET','https://dummyjson.com/users').then((userData)=>{
     console.log(userData);
     const userArray =userData.users

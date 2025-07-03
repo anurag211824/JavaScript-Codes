@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef1f5;
+  padding: 10px;
+}
+
+.password-container {
+  padding: 2rem 3rem;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.password-box {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  outline: none;
+  text-align: center;
+}
+
+.password-box:focus {
+  border-color: #4a90e2;
+}
+
+.genrate-password-btn,
+.change-theme-btn,.copy-password-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+.dark-theme {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+h1{
+  font-size: 2rem;
+
+  margin-bottom: 1rem;
+}
+
+

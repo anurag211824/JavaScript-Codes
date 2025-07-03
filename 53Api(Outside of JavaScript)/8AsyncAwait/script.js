@@ -6,3 +6,4 @@ async function makeRequest() {
   console.log(data);
   console.log("data received");
 }
+makeRequest();

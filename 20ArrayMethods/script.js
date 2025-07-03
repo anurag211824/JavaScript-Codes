@@ -7,11 +7,10 @@ const evenNumbers = [0, 2, 4, 6, 8, 10, 12, 14, 16, 18];
 
 // Removing the first element
 evenNumbers.shift(); // Removes 0
-
 // Adding an element at the beginning
 evenNumbers.unshift(1); // Adds 1 at the start
 
-console.log(evenNumbers);
+console.log(evenNumbers)
 
 // 2. Combining Arrays
 // --------------------

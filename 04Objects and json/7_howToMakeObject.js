@@ -30,9 +30,7 @@ function Person(name, age) {
   user1.greet(); // Output: Hi, I'm Anurag and I'm 20 years old.
   
 
-  let u = 12, v = 48;
-  [u, v] = [v, u];
-  console.log(v, u);
+
   
 
   

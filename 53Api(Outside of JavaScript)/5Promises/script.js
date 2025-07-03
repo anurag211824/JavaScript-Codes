@@ -9,9 +9,9 @@ const p = new Promise((resolve, reject) => {
     reject("Promise rejected");
   });
 });
-setTimeout(() => {
-  console.log("hi");
-});
+// setTimeout(() => {
+//   console.log("hi");
+// });
 p.then((data) => {
   console.log(data);
 })

@@ -3,20 +3,21 @@ const Addbtn = document.querySelector("button");
 const todolist = document.querySelector("ul");
 
 let todoArray = JSON.parse(localStorage.getItem("todolist")) || [];
-let complete = false;
 let editing = false;
 let currentTodo = null;
 
 // Function to render todos from localStorage
 function renderTodos() {
   todolist.innerHTML = "";
-  todoArray.forEach(text => {
+  todoArray.forEach((todos, index) => {
     let todo = document.createElement("div");
     todo.classList.add("todo");
     todo.innerHTML = `
-      <div class="todo-style"> <li class="todoo">${text}</li> </div>
+      <div class="todo-style"> 
+        <li class="todoo ${todos.completed ? 'todo-text' : ''}">${todos.todoName}</li> 
+      </div>
       <div class="buttons">
-        <button class="completeTodo">Complete</button>
+        <button class="completeTodo">${todos.completed ? 'Undo' : 'Complete'}</button>
         <button class="editTodo">Edit</button>
         <button class="removeTodo">Remove</button>
       </div>
@@ -36,50 +37,48 @@ function renderTodos() {
     const removeBtn = todo.querySelector(".removeTodo");
 
     // Edit functionality
-    editBtn.addEventListener("click", function () {
+    editBtn.addEventListener("click", function() {
       inputbox.value = todotextContainer.textContent;
       Addbtn.textContent = "Edit";
       editing = true;
-      currentTodo = todotextContainer;
+      currentTodo = { element: todotextContainer, index };
     });
 
     // Complete functionality
-    completeBtn.addEventListener("click", function () {
-      todotextContainer.classList.toggle("todo-text");
-      complete = true;
+    completeBtn.addEventListener("click", function() {
+      // Toggle completed status
+      todoArray[index].completed = !todoArray[index].completed;
+      saveToLocalStorage(todoArray);
+      renderTodos(); // Re-render to update UI
     });
 
     // Remove functionality
-    removeBtn.addEventListener("click", function () {
-      let todoText = todotextContainer.textContent;
-      deleteLocalTodo(todoText);
+    removeBtn.addEventListener("click", function() {
+      todoArray = todoArray.filter(todo => todo.todoName !== todos.todoName);
+      saveToLocalStorage(todoArray);
       renderTodos();
     });
   });
 }
 
 // Event listener for adding/editing todo
-Addbtn.addEventListener("click", function () {
+Addbtn.addEventListener("click", function() {
   let text = inputbox.value.trim();
 
   if (editing && currentTodo) {
-    let prevTodoText = currentTodo.textContent;
-    let newTodotext = text;
-    currentTodo.textContent = text;
-
-    if (complete) {
-      currentTodo.classList.toggle("todo-text");
-      complete = false;
-    }
-
+    // Update the todo
+    todoArray[currentTodo.index].todoName = text;
+    saveToLocalStorage(todoArray);
+    
+    // Reset editing state
     editing = false;
     Addbtn.textContent = "Add";
     inputbox.value = "";
     currentTodo = null;
-    editTodoLocalStorage(newTodotext, prevTodoText);
+    renderTodos();
   } else {
     if (text.length !== 0) {
-      todoArray.push(text);
+      todoArray.push({ todoName: text, completed: false });
       saveToLocalStorage(todoArray);
       renderTodos();
     }
@@ -91,21 +90,5 @@ function saveToLocalStorage(todoArray) {
   localStorage.setItem("todolist", JSON.stringify(todoArray));
 }
 
-// Function to edit a todo in localStorage
-function editTodoLocalStorage(newTodotext, prevTodoText) {
-  let storedTodoArray = JSON.parse(localStorage.getItem("todolist")) || [];
-  let editIndex = storedTodoArray.findIndex(todo => todo === prevTodoText);
-  if (editIndex !== -1) {
-    storedTodoArray[editIndex] = newTodotext;
-  }
-  saveToLocalStorage(storedTodoArray);
-}
-
-// Function to delete a todo from localStorage
-function deleteLocalTodo(todoText) {
-  todoArray = todoArray.filter(todo => todo !== todoText);
-  saveToLocalStorage(todoArray);
-}
-
 // Render todos on page load
-document.addEventListener("DOMContentLoaded",renderTodos)
+document.addEventListener("DOMContentLoaded", renderTodos);
