@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Hoisting</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: grid;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-left: 6px solid #e67e22;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .card h2 {
+      color: #d35400;
+      margin-bottom: 10px;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 4px solid #3498db;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 14px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    code {
+      background: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Hoisting</h1>
+
+  <div class="container">
+    <div class="card">
+      <h2>What is Hoisting?</h2>
+      <p>Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope (either function or global).</p>
+    </div>
+
+    <div class="card">
+      <h2>How It Works</h2>
+      <ul>
+        <li><code>var</code> is hoisted and initialized as <code>undefined</code>.</li>
+        <li><code>let</code> and <code>const</code> are hoisted but not initialized (they are in the **Temporal Dead Zone**).</li>
+        <li>Function declarations are hoisted completely — code can use them before their declaration.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Code Example</h2>
+      <pre><code>// Example with var
+console.log(x); // undefined
+var x = 5;
+
+// Example with let/const
+console.log(y); // ReferenceError
+let y = 10;
+
+// Function hoisting
+greet(); // "Hello"
+function greet() {
+  console.log("Hello");
+}
+      </code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Interview Tips</h2>
+      <ul>
+        <li>Explain the difference between declaration hoisting and initialization.</li>
+        <li>Mention Temporal Dead Zone (TDZ) for <code>let</code> and <code>const</code>.</li>
+        <li>Clarify that function expressions and arrow functions are not hoisted like function declarations.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Bonus: Function Expression</h2>
+      <pre><code>sayHi(); // TypeError: sayHi is not a function
+
+var sayHi = function() {
+  console.log("Hi");
+};</code></pre>
+    </div>
+  </div>
+
+</body>
+<script src="02-hoisting.js"></script>
+</html>

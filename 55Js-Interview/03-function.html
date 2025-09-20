@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Functions in JavaScript</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: #000;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00f7ff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      display: grid;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #111;
+      border-left: 6px solid #00f7ff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
+    }
+
+    .card h2 {
+      color: #00e6e6;
+      margin-bottom: 10px;
+    }
+
+    pre {
+      background-color: #222;
+      padding: 10px;
+      border-left: 4px solid #0ff;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 15px;
+    }
+
+    code {
+      background-color: #333;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Functions in JavaScript</h1>
+
+  <div class="container">
+    <div class="card">
+      <h2>What is a Function?</h2>
+      <p>A function is a reusable block of code that performs a specific task. Functions help in code reusability and modularity.</p>
+    </div>
+
+    <div class="card">
+      <h2>Types of Functions</h2>
+      <ul>
+        <li><strong>Function Declaration</strong></li>
+        <li><strong>Function Expression</strong></li>
+        <li><strong>Arrow Function</strong></li>
+        <li><strong>Anonymous Function</strong></li>
+        <li><strong>IIFE (Immediately Invoked Function Expression)</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Example Code</h2>
+      <pre><code>// Function Declaration
+function greet() {
+  console.log("Hello");
+}
+
+// Function Expression
+const sayHi = function() {
+  console.log("Hi");
+};
+
+// Arrow Function
+const add = (a, b) => a + b;
+      </code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Parameters vs Arguments</h2>
+      <ul>
+        <li><strong>Parameters</strong>: Names listed in function definition</li>
+        <li><strong>Arguments</strong>: Values passed to the function</li>
+      </ul>
+      <pre><code>function sum(a, b) {
+  return a + b;
+}
+sum(5, 10); // 5 and 10 are arguments
+      </code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Interview Tips</h2>
+      <ul>
+        <li>Know hoisting behavior: declarations vs expressions</li>
+        <li>Understand arrow function's lexical <code>this</code></li>
+        <li>Explain pure vs impure functions</li>
+        <li>Practice closures and IIFE</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+<script src="03-function.js"></script>
+</html>
